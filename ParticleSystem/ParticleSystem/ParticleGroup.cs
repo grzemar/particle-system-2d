@@ -9,11 +9,11 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace ParticleSystem
 {
-    //TODO
     public abstract class ParticleGroup
     {
         protected Queue<Particle> freeParticles;
         protected List<Particle> particles;
+        protected int maxParticleCount;
 
         public Texture2D Texture
         {
@@ -21,15 +21,25 @@ namespace ParticleSystem
             private set;
         }
 
-        public ParticleGroup()
+        public ParticleGroup(int maxParticles)
         {
             freeParticles = new Queue<Particle>();
             particles = new List<Particle>();
+            maxParticleCount = maxParticles;
+            for (int i = 0; i < maxParticleCount; i++)
+            {
+                Particle p = new Particle();
+                freeParticles.Enqueue(p);
+            }
         }
 
         public void LoadContent(ContentManager content, string fileName)
         {
             Texture = content.Load<Texture2D>(fileName);  
+        }
+
+        public virtual void InitializeGroup()
+        {
         }
 
         protected virtual void SetupParameters()
