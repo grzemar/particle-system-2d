@@ -38,7 +38,7 @@ namespace ParticleSystem
             Texture = content.Load<Texture2D>(fileName);  
         }
 
-        public virtual void InitializeGroup()
+        public virtual void InitializeGroup(Vector2 location)
         {
         }
 
