@@ -38,17 +38,13 @@ namespace ParticleSystem
             Texture = content.Load<Texture2D>(fileName);  
         }
 
-        public virtual void InitializeGroup(Vector2 location)
-        {
-        }
+        public abstract void InitializeGroup(Vector2 location);
 
         protected virtual void SetupParameters()
         {
         }
 
-        protected virtual void InitializeParticle(Particle particle, Vector2 location)
-        {
-        }
+        protected abstract void InitializeParticle(Particle particle, Vector2 location);
 
         public void Update(GameTime gameTime)
         {
@@ -65,9 +61,6 @@ namespace ParticleSystem
             particles.RemoveAll( (item) => !(item.Age < item.Lifetime));
         }
 
-        public virtual void Draw(SpriteBatch spriteBatch)
-        {
-        }
-
+        public abstract void Draw(SpriteBatch spriteBatch);
     }
 }

@@ -59,7 +59,7 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultFogParticleGroup.cs" />
+    <Compile Include="SampleEffects\DefaultFogParticleGroup.cs" />
     <Compile Include="Particle.cs" />
     <Compile Include="ParticleGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
