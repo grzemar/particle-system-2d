@@ -7,9 +7,9 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace ParticleSystem
+namespace ParticleSystem.SampleEffects
 {
-    public class DefaultFogParticleGroup: ParticleGroup
+    public class DefaultFogParticleGroup : ParticleGroup
     {
         private int minNumParticles;
         private int maxNumParticles;

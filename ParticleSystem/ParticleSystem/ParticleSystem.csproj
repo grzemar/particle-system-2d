@@ -59,6 +59,7 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SampleEffects\DefaultFlashParticleGroup.cs" />
     <Compile Include="SampleEffects\DefaultFogParticleGroup.cs" />
     <Compile Include="Particle.cs" />
     <Compile Include="ParticleGroup.cs" />
